@@ -7,7 +7,7 @@ import Browse from "../components/Browse"
 import Categories from "../components/Categories"
 
 import Navbar from "../components/Navbar"
-import Footer from "../components/Footer";
+ 
 import Extrs from "../components/Extrs";
 
  
