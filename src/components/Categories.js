@@ -1,61 +1,50 @@
 import React   from 'react'
 import BookCard from './Card';
-import { Link } from 'react-router-dom';
+ 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+ 
  
 export default function Categories({books}) {
      
-  
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  }
   return (
     <> 
-     
-    <div style={{marginLeft:"20px",marginRight:"20px"}}>
-      <h2 style={{borderBottom:"1px solid black",textAlign:"center",padding:"10px",fontFamily:"cursive"}}>BROWSE GENRES</h2>
-    </div>
-      <div className='category-section' >
-        <div className='genre-selector'  >
-            <nav>
-              <h4>Categories</h4>
-              <ul  >
-                <li>
-                  <Link to="romance">Romance</Link>
-                </li>
-                <li>
-                  <Link to="historical">Historical</Link>
-                </li>
-                <li>
-                  <Link to="politics">Politics</Link>
-                </li>
-                <li>
-                  <Link to="fantasy'">Fantasy</Link>
-                </li>
-                <li>
-                  <Link to="action">Action</Link>
-                </li>
-                <li>
-                  <Link to="slice of life">Slice of life</Link>
-                </li>
-                <li>
-                  <Link to="adventure">Adventure</Link>
-                </li>
-                <li>
-                  <Link to="action">Action</Link>
-                </li>
-                <li>
-                  <Link to="action">Adventure</Link>
-                </li>
-              </ul>
-            </nav>
-        </div>
-        
-       
-        <div className="ui grid">
-        {books? books.map(book=><BookCard book={book}></BookCard>):<h2>loading</h2>}
-            </div>
-         
-        
-         
-        
-      </div>
+    <h1>Critically Acclaimed</h1>
+      <Carousel responsive={responsive}>
+      {books.map(book=><BookCard book={book}></BookCard>)}
+      </Carousel>;
+    <h1>Young Adult</h1> 
+    <Carousel responsive={responsive}>
+      {books.map(book=><BookCard book={book}></BookCard>)}
+      </Carousel>;
+    <h1>Political</h1> 
+    <Carousel responsive={responsive}>
+      {books.map(book=><BookCard book={book}></BookCard>)}
+      </Carousel>;
+    <h1>Slice of life</h1>
+    <Carousel responsive={responsive}>
+      {books.map(book=><BookCard book={book}></BookCard>)}
+      </Carousel>;
     </>
+       
+     
+    
   )
 }

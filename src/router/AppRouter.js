@@ -37,7 +37,7 @@ export default function AppRouter() {
              
         
       </Routes>
-      <Footer></Footer>
+      
       
    </>
  )
