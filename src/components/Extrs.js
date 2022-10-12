@@ -14,43 +14,43 @@ export default function Extrs({books}) {
                 <img style={{height:"100%",borderRadius:"10px"}} src={bookselected.cover} alt="bookimg"></img>
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>TYPE</h5>
+            <h2>TYPE</h2>
             <p>{bookselected.type}</p>
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>GENRE</h5>
+            <h2>GENRE</h2>
              {bookselected.genre.map(genre=>{
               return <li>{genre}</li>
              })}
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>TAGS</h5>
+            <h2>TAGS</h2>
             {bookselected.tags.map(genre=>{
               return <li>{genre}</li>
              })}
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>LANGUAGE</h5>
+            <h2>LANGUAGE</h2>
             {bookselected.language}
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>GENRE</h5>
+            <h2>GENRE</h2>
             {bookselected.tags.map(genre=>{
               return <li>{genre}</li>
              })}
           </div>
           <div style={{marginTop:"10px"}}>
-            <h5>YEAR</h5>
+            <h2>YEAR</h2>
             <p>{bookselected.year}</p>
           </div>
         </div>
       <div class="second-third">
         <div>
-          <h5>DESCRIPTION</h5>
+          <h2>DESCRIPTION</h2>
         </div>
         <div style={{marginTop:"10px"}}>{bookselected.summary}</div>
           <div style={{marginTop:"10px"}}>
-            <h5>ASSOCIATED NAMES</h5>
+            <h2>ASSOCIATED NAMES</h2>
              {bookselected.associated.map((name)=>{
               return <p>{name}</p>
              })}
@@ -58,7 +58,7 @@ export default function Extrs({books}) {
         </div>
       <div class="third-third">
           <div>
-            <h5>UPDATES</h5>
+            <h2>UPDATES</h2>
             <ul>
               <li><Link>Forum</Link></li>
               <li><Link>Random Novel</Link></li>
@@ -69,7 +69,7 @@ export default function Extrs({books}) {
             </ul>
           </div>
           <div>
-            <h5>USER TOOLS</h5>
+            <h2>USER TOOLS</h2>
             <ul>
               <li><Link>Reading List</Link></li>
               <li><Link>Release Filtering</Link></li>

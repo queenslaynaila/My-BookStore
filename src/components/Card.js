@@ -1,16 +1,22 @@
 import React from 'react'
- 
+ import { Link } from 'react-router-dom'
  
 export default function Card({book}) {
   return (
       
-    <div class="card">
-    <img src={book.cover} alt="Avatar" style={{width:"100%"}}></img>
-    <div class="container">
-      <h4><b>{book.name}</b></h4> 
-      <button id='card-btn'>Read More</button>
+    <div className="card">
+    <Link>
+        <img src={book.cover} alt=""/>
+    </Link>
+    <div className="content">
+        <h3>
+            <Link>{book.name}</Link>
+        </h3>
+        <span>{book.likes}likes</span>
+        <Link style={{textDecoration:"none"}} to={`/category/${book.id}`}><button>VIEW MORE</button></Link>
+        
     </div>
-  </div>
+</div>
  
   )
 }
